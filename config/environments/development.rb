@@ -26,4 +26,9 @@ Instapolaroid::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  Instagram.configure do |config|
+    config.client_id = "9431c670edab44ca89a93da2158e7a7c"
+    config.client_secret = "776f4baf51274a7c803ef2d557bbff7f"
+  end
 end

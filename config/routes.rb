@@ -1,4 +1,10 @@
 Instapolaroid::Application.routes.draw do
+
+  controller :callbacks do
+    get "/callback"  => :callback_verification
+    post "/callback" => :callback
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

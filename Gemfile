@@ -14,6 +14,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
+# A Ruby wrapper for the Instagram REST and Search APIs
 gem 'instagram'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes

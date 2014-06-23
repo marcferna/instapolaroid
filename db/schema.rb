@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140615110521) do
+ActiveRecord::Schema.define(version: 20140623015448) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(version: 20140615110521) do
     t.string   "hashtag"
     t.date     "start_at"
     t.date     "end_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "photos", force: true do |t|
+    t.integer  "event_id"
+    t.string   "photo_id"
+    t.string   "url"
+    t.string   "username"
+    t.text     "parameters"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

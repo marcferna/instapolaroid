@@ -2,6 +2,16 @@ class Event < ActiveRecord::Base
   before_save :clean_hashtag
   after_create :create_subscription
 
+  has_many :photos
+
+  def fetch_recent_photos
+    photos = Instagram.tag_recent_media(self.hashtag)
+    photos.each do |photo|
+      next if Photo.find_by_instagram_photo_id(photo.id)
+      Photo.create_with_parameters(photo, self.id)
+    end
+  end
+
   protected
 
     # Before Save callback

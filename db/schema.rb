@@ -27,10 +27,11 @@ ActiveRecord::Schema.define(version: 20140623015448) do
 
   create_table "photos", force: true do |t|
     t.integer  "event_id"
-    t.string   "photo_id"
+    t.string   "instagram_photo_id"
     t.string   "url"
     t.string   "username"
     t.text     "parameters"
+    t.boolean  "printed"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

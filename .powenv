@@ -1,2 +1,3 @@
 export INSTAGRAM_CLIENT_ID="9431c670edab44ca89a93da2158e7a7c"
 export INSTAGRAM_CLIENT_SECRET="776f4baf51274a7c803ef2d557bbff7f"
+export CALLBACK_URL="https://instapolaroid.ngrok.com/callback"

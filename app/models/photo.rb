@@ -2,6 +2,8 @@ class Photo < ActiveRecord::Base
 
   serialize :parameters, Hash
 
+  after_create :print
+
   def self.create_with_parameters(photo, event_id)
     Photo.create!(
       event_id:           event_id,
@@ -11,4 +13,10 @@ class Photo < ActiveRecord::Base
       parameters:         photo
     )
   end
+
+  protected
+
+    def print
+      # system("lpr", "/Users/marc/Desktop/file.pdf") or raise "print failed"
+    end
 end

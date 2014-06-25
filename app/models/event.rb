@@ -1,6 +1,6 @@
 class Event < ActiveRecord::Base
   before_save :clean_hashtag
-  after_create :create_subscription
+  before_create :create_subscription
 
   has_many :photos
 
@@ -27,6 +27,7 @@ class Event < ActiveRecord::Base
     # hashtag specified
     #
     def create_subscription
-      Subscription.create(hashtag)
+      subscription_id = Subscription.create(hashtag)
+      self.instagram_subscription_id = subscription_id
     end
 end

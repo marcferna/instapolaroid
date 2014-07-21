@@ -8,6 +8,90 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require bootstrap
+ *= require flat-ui
  *= require_self
  *= require_tree .
  */
+
+/* Override Bootstrap 3 font locations */
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../assets/glyphicons-halflings-regular.eot');
+  src: url('../assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+  url('../assets/glyphicons-halflings-regular.woff') format('woff'),
+  url('../assets/glyphicons-halflings-regular.ttf') format('truetype'),
+  url('../assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+/* Override FlatUI font locations */
+@font-face {
+  font-family: 'Lato';
+  src: url('../assets/lato-black.eot');
+  src: url('../assets/lato-black.eot?#iefix') format('embedded-opentype'),
+  url('../assets/lato-black.woff') format('woff'),
+  url('../assets/lato-black.ttf') format('truetype'),
+  url('../assets/lato-black.svg#latoblack') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../assets/lato-bold.eot');
+  src: url('../assets/lato-bold.eot?#iefix') format('embedded-opentype'),
+  url('../assets/lato-bold.woff') format('woff'),
+  url('../assets/lato-bold.ttf') format('truetype'),
+  url('../assets/lato-bold.svg#latobold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../assets/lato-bolditalic.eot');
+  src: url('../assets/lato-bolditalic.eot?#iefix') format('embedded-opentype'),
+  url('../assets/lato-bolditalic.woff') format('woff'),
+  url('../assets/lato-bolditalic.ttf') format('truetype'),
+  url('../assets/lato-bolditalic.svg#latobold-italic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../assets/lato-italic.eot');
+  src: url('../assets/lato-italic.eot?#iefix') format('embedded-opentype'),
+  url('../assets/lato-italic.woff') format('woff'),
+  url('../assets/lato-italic.ttf') format('truetype'),
+  url('../assets/lato-italic.svg#latoitalic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../assets/lato-light.eot');
+  src: url('../assets/lato-light.eot?#iefix') format('embedded-opentype'),
+  url('../assets/lato-light.woff') format('woff'),
+  url('../assets/lato-light.ttf') format('truetype'),
+  url('../assets/lato-light.svg#latolight') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../assets/lato-regular.eot');
+  src: url('../assets/lato-regular.eot?#iefix') format('embedded-opentype'),
+  url('../assets/lato-regular.woff') format('woff'),
+  url('../assets/lato-regular.ttf') format('truetype'),
+  url('../assets/lato-regular.svg#latoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Flat-UI-Icons";
+  src: url('../assets/flat-ui-icons-regular.eot');
+  src: url('../assets/flat-ui-icons-regular.eot?#iefix') format('embedded-opentype'),
+  url('../assets/flat-ui-icons-regular.woff') format('woff'),
+  url('../assets/flat-ui-icons-regular.ttf') format('truetype'),
+  url('../assets/flat-ui-icons-regular.svg#flat-ui-icons-regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

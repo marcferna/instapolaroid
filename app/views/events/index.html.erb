@@ -1,18 +1,35 @@
-<h1>Events</h1>
-<%= link_to "New Event", new_event_path %>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Hashtag</th>
-    <th>Start At</th>
-    <th>End At</th>
-  </tr>
-  <%= @events.each do |event| %>
-    <tr>
-      <td><%= event.title %></td>
-      <td><%= event.hashtag %></td>
-      <td><%= event.start_at %></td>
-      <td><%= event.end_at %></td>
-    </tr>
-  <% end %>
-</table>
+<div class="page-header">
+  <h1>Events</h1>
+
+</div>
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Hashtag</th>
+        <th>Start At</th>
+        <th>End At</th>
+      </tr>
+    </thead>
+    <% @events.each do |event| %>
+      <tbody>
+        <tr>
+          <td><%= event.title %></td>
+          <td>#<%= event.hashtag %></td>
+          <td><%= event.start_at %></td>
+          <td><%= event.end_at %></td>
+        </tr>
+      </tbody>
+    <% end %>
+  </table>
+</div>
+<div class="row">
+  <div class="col-md-10"></div>
+  <div class="col-md-2">
+    <%= link_to "New Event",
+      new_event_path,
+      class: "btn btn-block btn-lg btn-primary pull-right"
+    %>
+  </div>
+</div>

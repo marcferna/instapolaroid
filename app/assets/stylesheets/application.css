@@ -95,3 +95,8 @@
   font-weight: normal;
   font-style: normal;
 }
+
+/* Custom container */
+.container[role=main] {
+  margin: 55px auto;
+}

@@ -29,7 +29,11 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+# Makes running your Rails app easier. Based on the ideas behind 12factor.net
 gem 'rails_12factor', group: :production
+
+# Hashie is a growing collection of tools that extend Hashes and make them more useful.
+gem 'hashie'
 
 group :assets do
   gem 'less-rails'

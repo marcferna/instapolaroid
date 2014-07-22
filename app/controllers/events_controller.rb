@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   def index
-    @events = Event.includes(:photos).all
+    @events = Event.order(:title)
   end
 
   def new

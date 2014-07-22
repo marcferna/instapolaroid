@@ -11,8 +11,9 @@ class EventsController < ApplicationController
     Event.create!(event_params)
   end
 
-  def edit
-    @event = Event.find(params["event_id"])
+  def show
+    @event = Event.find_by(id: params["id"])
+    @photos = @event.photos.limit(100) if @event.present?
   end
 
   private

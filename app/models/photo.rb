@@ -4,6 +4,8 @@ class Photo < ActiveRecord::Base
 
   after_create :print
 
+  belongs_to :event, counter_cache: true
+
   def self.create_with_parameters(photo, event_id)
     Photo.create!(
       event_id:           event_id,

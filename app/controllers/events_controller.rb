@@ -13,7 +13,11 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find_by(id: params["id"])
-    @photos = @event.photos.limit(100) if @event.present?
+    if @event.present?
+      @photos = @event.photos
+                      .order("created_at DESC")
+                      .limit(100)
+    end
   end
 
   private

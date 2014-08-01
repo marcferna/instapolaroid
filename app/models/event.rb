@@ -1,6 +1,6 @@
 class Event < ActiveRecord::Base
   before_save :clean_hashtag
-  before_create :create_subscription if Rails.env.production?
+  after_create :create_subscription if Rails.env.production?
 
   has_many :photos
 

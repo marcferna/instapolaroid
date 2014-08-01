@@ -8,7 +8,12 @@ class EventsController < ApplicationController
   end
 
   def create
-    Event.create!(event_params)
+    event = Event.new(event_params)
+    if event.save
+      redirect_to events_path, notice: "Event was created succesfully!"
+    else
+      redirect_to events_path, alert: "There was an error creating the event"
+    end
   end
 
   def show

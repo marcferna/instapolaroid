@@ -1,13 +1,13 @@
 class Photo < ActiveRecord::Base
 
-  serialize :parameters, Hash
-
+  # Callbacks
   after_create :print
 
   # Relationships
   belongs_to :event, counter_cache: true
   delegate :user, to: :event
 
+  # Class Methods
   class << self
 
     def create_with_parameters(photo, event_id)

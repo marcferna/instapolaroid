@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.5'
+gem 'rails', '4.1.7'
+gem 'activesupport', '~> 4.1.7'
 
 gem 'pg'
 

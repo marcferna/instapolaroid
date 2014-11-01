@@ -33,6 +33,9 @@ gem 'jbuilder', '~> 1.2'
 # Hashie is a growing collection of tools that extend Hashes and make them more useful.
 gem 'hashie'
 
+# Flexible authentication solution for Rails with Warden.
+gem 'devise'
+
 group :assets do
   gem 'less-rails'
   gem 'therubyracer', platforms: :ruby

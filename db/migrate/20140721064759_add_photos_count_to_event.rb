@@ -2,7 +2,7 @@ class AddPhotosCountToEvent < ActiveRecord::Migration
   def up
     add_column :events, :photos_count, :integer, default: 0
 
-    Event.find_each(select: 'id') do |result|
+    Event.select(:id).find_each do |result|
       Event.reset_counters(result.id, :photos)
     end
   end

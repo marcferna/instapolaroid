@@ -36,6 +36,11 @@ gem 'hashie'
 # Flexible authentication solution for Rails with Warden.
 gem 'devise'
 
+group :production do
+  # Performance management system
+  gem 'newrelic_rpm'
+end
+
 group :assets do
   gem 'less-rails'
   gem 'therubyracer', platforms: :ruby

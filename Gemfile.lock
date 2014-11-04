@@ -87,6 +87,7 @@ GEM
     minitest (5.4.2)
     multi_json (1.10.1)
     multipart-post (2.0.0)
+    newrelic_rpm (3.9.6.257)
     orm_adapter (0.5.0)
     pg (0.17.1)
     pry (0.10.1)
@@ -188,6 +189,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   less-rails
+  newrelic_rpm
   pg
   pry
   pry-byebug

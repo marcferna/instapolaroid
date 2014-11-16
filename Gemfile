@@ -36,6 +36,9 @@ gem 'hashie'
 # Flexible authentication solution for Rails with Warden.
 gem 'devise'
 
+# Redis-backed Ruby library for creating background jobs
+gem 'resque', require: "resque/server"
+
 group :production do
   # Performance management system
   gem 'newrelic_rpm'

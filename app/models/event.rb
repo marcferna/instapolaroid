@@ -1,7 +1,10 @@
 class Event < ActiveRecord::Base
-  before_save :clean_hashtag
-  after_create :create_subscription if Rails.env.production?
 
+  # Callbacks
+  before_save :clean_hashtag
+  after_create :create_subscriptions
+
+  # Relationships
   has_many :photos
 
   def fetch_recent_photos
@@ -12,22 +15,22 @@ class Event < ActiveRecord::Base
     end
   end
 
-  protected
+private
 
-    # Before Save callback
-    # Removes the "#" pound sign from the front of the hashtag string
-    #
-    def clean_hashtag
-      self.hashtag.slice!(0) if self.hashtag.first == "#"
-    end
+  #
+  # Before Save callback
+  # Removes the "#" pound sign from the front of the hashtag string
+  #
+  def clean_hashtag
+    self.hashtag.slice!(0) if self.hashtag.first == "#"
+  end
 
 
-    #
-    # Creates a new subscription with Instagram to get updates from the
-    # hashtag specified
-    #
-    def create_subscription
-      subscription_id = Subscription.create(hashtag)
-      self.instagram_subscription_id = subscription_id
-    end
+  #
+  # Creates a new subscription with Instagram to get updates from the
+  # hashtag specified
+  #
+  def create_subscriptions
+    Subscription.create_subscriptions(self.id, self.hashtag)
+  end
 end

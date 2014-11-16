@@ -28,10 +28,10 @@ class EventsController < ApplicationController
     end
   end
 
-  private
+private
 
-    def event_params
-      params.require(:event).permit(:title, :hashtag)
-    end
+  def event_params
+    params.require(:event).permit(:title, :hashtag)
+  end
 
 end

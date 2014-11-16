@@ -16,7 +16,7 @@
         <tr>
           <td><%= photo.username %></td>
           <td><%= image_tag(photo.url) %></td>
-          <td><%= photo.parameters.filter %></td>
+          <td><%= photo.parameters["filter"] %></td>
         </tr>
       </tbody>
     <% end %>
